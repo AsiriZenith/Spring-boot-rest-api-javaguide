@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import net.javaguides.springboot.model.Employee;
+import net.javaguides.springboot.model.Employees;
 import net.javaguides.springboot.repository.EmployeeRepository;
 import net.javaguides.springboot.service.EmployeeService;
 
@@ -19,12 +19,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public Employee saveEmployee(Employee employee) {
+	public Employees saveEmployee(Employees employee) {
 		return employeeRepository.save(employee);
 	}
 
 	@Override
-	public List<Employee> getAllEmployees() {
+	public List<Employees> getAllEmployees() {
 		return employeeRepository.findAll();
 	}
 

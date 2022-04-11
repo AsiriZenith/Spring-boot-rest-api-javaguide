@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import net.javaguides.springboot.model.Employee;
+import net.javaguides.springboot.model.Employees;
 import net.javaguides.springboot.service.EmployeeService;
 
 @RestController
@@ -25,12 +25,12 @@ public class EmployeeController {
 	}
 	
 	@PostMapping("/employees")
-	public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) {
-		return new ResponseEntity<Employee>(employeeService.saveEmployee(employee),HttpStatus.CREATED);
+	public ResponseEntity<Employees> saveEmployee(@RequestBody Employees employee) {
+		return new ResponseEntity<Employees>(employeeService.saveEmployee(employee),HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/employees")
-	public List<Employee> getAllEmployees() {
+	public List<Employees> getAllEmployees() {
 		return employeeService.getAllEmployees();
 	}
 }
